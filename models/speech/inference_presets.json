@@ -1,0 +1,15 @@
+{
+  "f0_method": "rmvpe",
+  "pitch": 0,
+  "protect": 0.33,
+  "volume_envelope": 0.5,
+  "presets": {
+    "clean": {
+      "index_rate": 0.0
+    },
+    "balanced": {
+      "index_rate": 0.25
+    }
+  },
+  "speaker_id": 0
+}

@@ -1,0 +1,33 @@
+{
+  "name": "dafeiyu-rvc-singing-v1",
+  "author": "YinZilu / 尹紫鹭幻想社",
+  "license": "CC-BY-NC-4.0",
+  "prepared_on": "2026-10-27",
+  "trained_on": "2026-10-26",
+  "rvc_version": "v2",
+  "sample_rate": 48000,
+  "f0": true,
+  "embedder": "contentvec",
+  "vocoder": "HiFi-GAN",
+  "speakers": 1,
+  "epochs": 300,
+  "steps": 6000,
+  "train_clips": 124,
+  "train_seconds": 658.94,
+  "holdout_clips": 9,
+  "holdout_seconds": 56.63,
+  "index_vectors": 32852,
+  "files": [
+    {
+      "file": "dafeiyu-singing-rvc-v1.pth",
+      "bytes": 57537354,
+      "sha256": "2233553f3040b07e8f850495bca0c11feaa0cbdf7e874d755786e94a5151b1a1"
+    },
+    {
+      "file": "dafeiyu-singing-rvc-v1.index",
+      "bytes": 103777659,
+      "sha256": "4b5e4d54b606eaec2575c227b3367398a3c2ea849d4b54cbb482b201b2851741"
+    }
+  ],
+  "modelscope_pipeline_supported": false
+}

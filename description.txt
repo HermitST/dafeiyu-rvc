@@ -1,0 +1,1 @@
+大肥鱼 RVC v1 演唱与日常说话双模型：48k / RMVPE / ContentVec，附匹配索引、参数与模型说明，CC BY-NC 4.0。

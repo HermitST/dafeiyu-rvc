@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>大肥鱼 RVC 演唱效果展示</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f3f6fc;color:#17243c;font:16px/1.7 system-ui,sans-serif}main{max-width:940px;margin:auto;padding:24px}img{width:100%;border-radius:18px}h1{font-size:30px}h2{font-size:22px}a{color:#2454a1}.credit,footer{font-size:13px;color:#52617a}.panel{background:white;padding:24px;border-radius:18px;margin:24px 0;border:1px solid #dce4f0}.pair{display:grid;grid-template-columns:1fr 1fr;gap:22px}audio{width:100%}button{padding:10px 16px;margin:5px 8px 5px 0;border:1px solid #9cacc3;border-radius:8px;background:#edf3ff;color:#18365c;cursor:pointer}button[aria-pressed=true]{background:#2454a1;color:white}.status{min-height:28px}@media(max-width:640px){.pair{grid-template-columns:1fr}main{padding:16px}}
+</style></head><body><main><img src="assets/cover.png" alt="大肥鱼角色封面">
+<p class="credit">服装形象参考自 @ZipZipPipe 的二创设计，该设计基于 @上善无形 创作的鲸鱼娘形象进行二次创作；相关角色设计遵循 CC BY-NC-SA 4.0 协议。</p><h1>大肥鱼 RVC 演唱效果展示</h1>
+<p>杨丞琳《雨爱》1:15–1:45，30 秒。演唱版 v1，300 轮，index 0.25，原调、原速。输入是原唱分离人声；此页不展示日常说话版。</p>
+<section class="panel"><h2>带伴奏对比</h2><p>同一段落、相同伴奏，方便比较整体听感。</p><div class="pair">
+<div><h3>转换前 · 杨丞琳</h3><audio controls preload="metadata" src="assets/demo/before_mix.mp3"></audio></div>
+<div><h3>转换后 · 大肥鱼 RVC</h3><audio controls preload="metadata" src="assets/demo/after_mix.mp3"></audio></div></div></section>
+<section class="panel"><h2>同位置切换试听</h2><p>切换时保留播放位置；选择纯人声可集中比较音色与咬字。</p>
+<div><button data-mode="mix" aria-pressed="true">带伴奏</button><button data-mode="dry" aria-pressed="false">纯人声</button></div>
+<div><button data-voice="before" aria-pressed="true">转换前</button><button data-voice="after" aria-pressed="false">转换后</button></div>
+<p class="status" id="status" aria-live="polite">转换前 / 带伴奏</p><audio id="compare" controls preload="metadata" src="assets/demo/before_mix.mp3"></audio></section>
+<footer><p>人声按统一参考电平制作，沿用相同伴奏与总增益；片段起止各有 20ms 淡入淡出。RVC 参数：RMVPE，pitch 0，index 0.25，protect 0.33，volume envelope 0.5。</p>
+<p>来源：<a href="https://www.youtube.com/watch?v=oec9R5ypf-o" rel="noreferrer">杨丞琳官方频道《雨爱》</a>。歌曲与原唱录音权利归各自权利人，展示片段不适用模型的 CC BY-NC 4.0 许可，也不代表原唱歌手背书。</p><p>模型：YinZilu / 尹紫鹭幻想社，CC BY-NC 4.0。角色设计：CC BY-NC-SA 4.0。本项目并非 DeepSeek 官方发布或背书。</p></footer></main>
+<script>
+const player=document.querySelector('#compare');let mode='mix',voice='before',position=0,resume=false;
+player.addEventListener('loadedmetadata',()=>{player.currentTime=Math.min(position,Math.max(0,player.duration-.01));if(resume)player.play().catch(()=>{});resume=false});
+function change(){position=player.currentTime||0;resume=!player.paused;player.pause();player.src='assets/demo/'+voice+'_'+mode+'.mp3';player.load();document.querySelector('#status').textContent=(voice==='before'?'转换前':'转换后')+' / '+(mode==='mix'?'带伴奏':'纯人声');document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===mode));document.querySelectorAll('[data-voice]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.voice===voice));}
+document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;change()});document.querySelectorAll('[data-voice]').forEach(b=>b.onclick=()=>{voice=b.dataset.voice;change()});document.querySelectorAll('audio').forEach(a=>a.addEventListener('play',()=>document.querySelectorAll('audio').forEach(b=>{if(a!==b)b.pause()})));
+</script></body></html>

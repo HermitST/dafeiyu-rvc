@@ -1,0 +1,33 @@
+{
+  "name": "dafeiyu-rvc-speech-v1",
+  "author": "YinZilu / 尹紫鹭幻想社",
+  "license": "CC-BY-NC-4.0",
+  "prepared_on": "2026-10-27",
+  "trained_on": "2026-10-26",
+  "rvc_version": "v2",
+  "sample_rate": 48000,
+  "f0": true,
+  "embedder": "contentvec",
+  "vocoder": "HiFi-GAN",
+  "speakers": 1,
+  "epochs": 200,
+  "steps": 5200,
+  "train_clips": 173,
+  "train_seconds": 966.0,
+  "holdout_clips": 15,
+  "holdout_seconds": 80.7,
+  "index_vectors": 48167,
+  "files": [
+    {
+      "file": "dafeiyu-speech-rvc-v1.pth",
+      "bytes": 57538280,
+      "sha256": "6f4576495afb30b4cdf8d57e58eea983aa480fa86ce6a84ad4e5f1bed682bfec"
+    },
+    {
+      "file": "dafeiyu-speech-rvc-v1.index",
+      "bytes": 152158299,
+      "sha256": "0cf0c11013db1ab7f061e1ec11df78f57397e34ae49ae52eff44c244f5efd86a"
+    }
+  ],
+  "modelscope_pipeline_supported": false
+}

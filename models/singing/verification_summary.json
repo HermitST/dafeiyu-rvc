@@ -1,0 +1,18 @@
+{
+  "train_clips": 124,
+  "index_vectors": 32852,
+  "index_dimensions": 768,
+  "all_entries_inside_sampler_boundaries": true,
+  "strict_state_dict_load": true,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "forward_shape": [
+    1,
+    1,
+    48000
+  ],
+  "forward_all_samples_finite": true,
+  "source_and_prepared_hashes_verified": true,
+  "training_holdout_isolation_verified": true,
+  "human_blind_test_winner_claimed": false
+}

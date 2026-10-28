@@ -1,0 +1,51 @@
+{
+  "version": "v1.0.0",
+  "prepared_on": "2026-10-27",
+  "uploaded": true,
+  "models": [
+    {
+      "kind": "singing",
+      "suggested_modelscope_name": "dafeiyu-rvc-singing-v1",
+      "description": "大肥鱼演唱音色转换模型，RVC v2 / 48k，使用纯演唱干声训练，300 轮；附匹配索引，适用于歌曲人声转换。CC BY-NC 4.0。",
+      "modelscope_directory": "modelscope/dafeiyu-rvc-singing-v1",
+      "release_asset": "release-assets/dafeiyu-rvc-singing-v1.zip",
+      "zip_bytes": 155103783,
+      "zip_sha256": "fef3aaaa9f1c7c0f753662e3baf03a56bc50f5aadc565a69396178985925b8e6",
+      "files": [
+        {
+          "file": "dafeiyu-singing-rvc-v1.pth",
+          "bytes": 57537354,
+          "sha256": "2233553f3040b07e8f850495bca0c11feaa0cbdf7e874d755786e94a5151b1a1"
+        },
+        {
+          "file": "dafeiyu-singing-rvc-v1.index",
+          "bytes": 103777659,
+          "sha256": "4b5e4d54b606eaec2575c227b3367398a3c2ea849d4b54cbb482b201b2851741"
+        }
+      ]
+    },
+    {
+      "kind": "speech",
+      "suggested_modelscope_name": "dafeiyu-rvc-speech-v1",
+      "description": "大肥鱼日常说话音色转换模型，RVC v2 / 48k，使用中文对白独立训练，200 轮；附匹配索引，适用于已录制语音文件转换。CC BY-NC 4.0。",
+      "modelscope_directory": "modelscope/dafeiyu-rvc-speech-v1",
+      "release_asset": "release-assets/dafeiyu-rvc-speech-v1.zip",
+      "zip_bytes": 197397374,
+      "zip_sha256": "bac524fa5fa2ae2d46f48f0d9d88c0f5bbbaee19a85e1e6b397ae544e7fd5f00",
+      "files": [
+        {
+          "file": "dafeiyu-speech-rvc-v1.pth",
+          "bytes": 57538280,
+          "sha256": "6f4576495afb30b4cdf8d57e58eea983aa480fa86ce6a84ad4e5f1bed682bfec"
+        },
+        {
+          "file": "dafeiyu-speech-rvc-v1.index",
+          "bytes": 152158299,
+          "sha256": "0cf0c11013db1ab7f061e1ec11df78f57397e34ae49ae52eff44c244f5efd86a"
+        }
+      ]
+    }
+  ],
+  "github_repository": "https://github.com/HermitST/dafeiyu-rvc",
+  "github_release": "https://github.com/HermitST/dafeiyu-rvc/releases/tag/v1.0.0"
+}
